@@ -24,7 +24,8 @@ router.get('/', function(req, res) {
 
   // extrae los sustantivos
   var nouns = r.nouns();
-
+  nouns.unique();
+  //console.log(people.out('array'));
   // hace el render de la vista entregando el texto, la lista de personas
   // y sustantivos
   res.render('nlp', {
